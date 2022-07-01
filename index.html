@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lieferhero</title>
+    <link rel="icon" type="image/x-icon" href="img/mainlogo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="jsonarray.js"></script>
+</head>
+
+<body id="bodyFlow" onload="render(), includeHTML(), renderBasket()">
+
+    <!-- header -->
+    <div w3-include-html="templates/header.html"></div>
+    <!-- Hauptbereich -->
+    <div class="mainsection">
+        <!-- Sektor links -->
+        <div class="mainleft">
+            <div>
+                <img class="headbackground" src="img/headbackground.jpg">
+            </div>
+            <div class="shopdetailsposition">
+                <div class="shopdetails">
+                    <p class="shopname">Pizza-Good</p>
+                    <div class="aligncenter">
+                        <img class="shopstars" src="img/stars.png">
+                        <a href="#" class="shopdetailslink">
+                            (6543 Bewertungen)
+                        </a>
+                        <img class="mainlogo" src="img/shoplogo.png">
+                    </div>
+                    <div class="aligncenter">
+                        <img class="icondel1" src="img/icondeliver1.png"> 30-45 min
+                        <img class="icondel2" src="img/icondeliver2.png"> 1,00€
+                        <img class="icondel3" src="img/icondeliver3.png"> Min. 10,00 €
+                    </div>
+                </div>
+                <div class="shopdetailsicons">
+                    <button class="infobtn1"><img class="iconsize" src="img/iconinfo.jpg"></button>
+                    <button class="infobtn2"><img class="iconsize" src="img/iconheart.jpg"></button>
+                </div>
+            </div>
+            <div class="dishesnav">
+                <img class="icondel1" src="img/search.png">
+                <a class="dishesnavlink" href="#areafav">Beliebte Gerichte</a>
+                <a class="dishesnavlink" href="#areapizza">Pizza</a>
+                <a class="dishesnavlink" href="#areasalat">Salat</a>
+                <a class="dishesnavlink" href="#areadrink">Getränke</a>
+
+            </div>
+            <div>
+                <div id="areafav" class="dishesnavtitle">Beliebte Gerichte</div>
+                <div class="favourites" id="favourites"></div>
+                <img class="areafoodsize" src="img/areafood.jpg">
+                <div id="areapizza" class="dishesnavtitle">Pizza<br><i class="dishesnavtitlestyle">Alle Pizzen werden
+                        mit Tomatensauce und Mozzarella zubereitet.</i></div>
+                <div class="card" id="card"></div>
+                <img class="areafoodsize" src="img/areasalad.jpg">
+                <div id="areasalat" class="dishesnavtitle">Salat<br><i class="dishesnavtitlestyle">Alle Salate werden
+                        mit einem Dressing Ihrer Wahl zubereitet.</i></div>
+                <div class="card" id="card"></div>
+                <img class="areafoodsize" src="img/areadrinks.jpg">
+                <div id="areadrink" class="dishesnavtitle">Getränke</div>
+                <div class="card" id="card"></div>
+                <div onclick="responsiveBasket()" id="responsivePay" class="payButtonResponsive">Warenkorb</div>
+            </div>
+            <div>
+                <p class="impheader">Impressum</p>
+                <p class="imptext">Pizza-Good GmbH <br>
+                    Firma Yener Bas <br>
+                    Padawan Straße 1 <br>
+                    12345 Nirgendwo<br>
+                    Gesetzlicher Vertreter: Yener Bas<br>
+                    info@Pizza-Good.de<br>
+                    Unternehmensregister: Nirgendwo<br>
+                    Unternehmensregister-Nr: HRB 123456<br>
+                    Unternehmensregister: Stadt Nirgendwo<br>
+                    Unternehmensregister-Nr: 1234567<br>
+                    <br>
+                    Plattform der EU-Kommission zur Online-Streitbeilegung: https://ec.europa.eu/consumers/odr<br>
+                    <br>
+                </p>
+            </div>
+        </div>
+        <!-- Sector rechts -->
+        <div class="basketstyle basket" id="rightDiv">
+            <div class="basketposition">
+                <div class="basketheader1">
+                    <b>Warenkorb</b>
+                    <div class="mobileBack">Zurück</div>
+                </div>
+                <div class="basketscroll">
+                    <div class="basketheader2" id="basket">
+                        <img class="basketheader2img" src="img/iconwarenkorb.png">
+                        <p class="bh2title1"><b>Fülle deinen Warenkorb</b></p>
+                        <p class="bh2title2">Füge einige leckere
+                            Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</p>
+                    </div>
+                    <div id="paybuttonextra"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div w3-include-html="templates/footer.html"></div>
+
+</body>
+
+</html>
